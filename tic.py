@@ -24,20 +24,30 @@ def check_winner(board):
 def tic_tac_toe():
     board = [[" "]*3 for _ in range(3)]
     player = "X"
+
     while not check_winner(board):
         print_board(board)
-        row = int(input("Enter row (0, 1, or 2) for player " + player + ": "))
-        col = int(input("Enter column (0, 1, or 2) for player " + player + ": "))
-        if board[row][col] == " ":
-            board[row][col] = player
-            if player == "X":
-                player = "O"
+        try:
+            row = int(input("Enter row (0, 1, or 2) for player " + player + ": "))
+            col = int(input("Enter column (0, 1, or 2) for player " + player + ": "))
+            if 0 <= row <= 2 and 0 <= col <= 2:
+                if board[row][col] == " ":
+                    board[row][col] = player
+                    #player = "O" if player == "X" else "X"
+                else:
+                    print("That spot is already taken! Try again.")
             else:
-                player = "X"
+                print("Invalid input. Please enter a number between 0 and 2.")
+        except ValueError:
+            print("Invalid input. Please enter a number between 0 and 2.")
+
+        if player == "X":
+            player = "O"
         else:
-            print("That spot is already taken! Try again.")
+            player = "X"
 
     print_board(board)
+
     if player == "X":
         winner = "O"
     else:
