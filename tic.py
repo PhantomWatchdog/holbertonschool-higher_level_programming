@@ -27,13 +27,20 @@ def tic_tac_toe():
 
     while not check_winner(board):
         print_board(board)
-        #Add valid move
         valid_move = False
         while not valid_move:
 
             try:
                 row = int(input("Enter row (0, 1, or 2) for player " + player + ": "))
+                #Add check
+                if row not in range(3):
+                    print("Invalid input for row. Please enter a number between 0 and 2.")
+                    continue
                 col = int(input("Enter column (0, 1, or 2) for player " + player + ": "))
+                #Add check
+                if col not in range(3):
+                    print("Invalid input for column. Please enter a number between 0 and 2.")
+                    continue
                 if 0 <= row <= 2 and 0 <= col <= 2:
                     if board[row][col] == " ":
                         board[row][col] = player
