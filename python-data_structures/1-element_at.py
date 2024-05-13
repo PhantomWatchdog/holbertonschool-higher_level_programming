@@ -6,5 +6,5 @@ def element_at(my_list, idx):
             return None
         elif idx > len(listing):
             return None
-
-        print("{}".format(listing))
+        else:
+            return idx + 1
