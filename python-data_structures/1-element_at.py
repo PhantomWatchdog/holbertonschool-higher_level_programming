@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
-    listing = my_list
-    for item in listing:
+    for item in my_list:
         if idx < 0:
             return None
-        elif idx > len(listing):
+        elif idx > len(my_list):
             return None
         else:
             return idx + 1
