@@ -1,3 +1,4 @@
 {
-  "color-highlight.markerType": "underline"
+  "color-highlight.markerType": "underline",
+  "python.analysis.autoImportCompletions": true
 }
