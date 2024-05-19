@@ -38,7 +38,7 @@ class Node:
         Raises:
             TypeError: If the value is not an integer.
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
 
@@ -64,7 +64,7 @@ class Node:
             TypeError: If the value is not a Node object.
 
         """
-        if value is not None and type(value) is not Node:
+        if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
@@ -90,12 +90,12 @@ class SinglyLinkedList:
         Returns:
             str: A string representation of the linked list.
         """
-        string = ""
+        string = []
         current = self.__head
         while current is not None:
-            string += str(current.data) + "\n"
+            string.append(str(current.data))
             current = current.next_node
-        return string
+        return "\n".join(string)
 
     def sorted_insert(self, value):
         """
