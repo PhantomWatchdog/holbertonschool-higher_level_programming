@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import re
 
 
 def magic_calculation(a, b):
