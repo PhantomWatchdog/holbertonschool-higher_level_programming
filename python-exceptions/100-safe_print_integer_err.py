@@ -5,6 +5,8 @@
 
 
 import sys
+
+
 def safe_print_integer_err(value):
     """
     Safely prints an integer value.
