@@ -16,8 +16,7 @@ def safe_function(fct, *args):
         The result of the function execution if successful, None otherwise.
     """
     try:
-        result = fct(*args)
-        return result
+        return fct(*args)
     except Exception as e:
         print("Exception: {}".format(e))
         return None
