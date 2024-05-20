@@ -1,41 +1,15 @@
-# Test function printing text with 2 \n after each specified characters
+============================
+doctest for 5-text_indentation.py
+============================
+``text_indentation()`` prints text with two newlines after '.' '?' or ':'
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-# Test case 1: text is a number
->>> text_indentation(2)
-Traceback (most recent call last):
-TypeError: text must be a string
+SUCCESSFUL TEST CONDITIONS
+==========================
 
-# Test case 2: text is None
->>> text_indentation(None)
-Traceback (most recent call last):
-TypeError: text must be a string
-
-# Test case 3: text is a string with .
->>> text_indentation("Black.")
-Black.
-<BLANKLINE>
-
-# Test case 4: text is a string with ?
->>> text_indentation("Black?")
-Black?
-<BLANKLINE>
-
-# Test case 5: text is string with :
->>> text_indentation("Black:")
-Black:
-<BLANKLINE>
-
-# Test case 6: text is string with space at start
->>> text_indentation(" Black")
- Black
-
-# Test case 7: test is string with blankspace
->>> text_indentation("    ")
-<BLANKLINE>
-
-# Test case 8: size is a string with multilines and ? . and :
+testing with marker '.' '?' and ':'
+::
 >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
 ... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
@@ -47,51 +21,93 @@ Black:
 ... beatiorem! Iam ruinas videres""")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <BLANKLINE>
- Quonam modo?
+Quonam modo?
 <BLANKLINE>
- Utrum igitur tibi litteram videor an totas paginas commovere?
+Utrum igitur tibi litteram videor an totas paginas commovere?
 <BLANKLINE>
- Non autem hoc:
+Non autem hoc:
 <BLANKLINE>
- igitur ne illud quidem.
+igitur ne illud quidem.
 <BLANKLINE>
- Fortasse id optimum, sed ubi illud:
+Fortasse id optimum, sed ubi illud:
 <BLANKLINE>
- Plus semper voluptatis?
+Plus semper voluptatis?
 <BLANKLINE>
- Teneo, inquit, finem illi videri nihil dolere.
+Teneo, inquit, finem illi videri nihil dolere.
 <BLANKLINE>
- Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
+Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
 <BLANKLINE>
- Si id dicis, vicimus.
+Si id dicis, vicimus.
 <BLANKLINE>
- Inde sermone vario sex illa a Dipylo stadia confecimus.
+Inde sermone vario sex illa a Dipylo stadia confecimus.
 <BLANKLINE>
- Sin aliud quid voles, postea.
+Sin aliud quid voles, postea.
 <BLANKLINE>
- Quae animi affectio suum cuique tribuens atque hanc, quam dico.
+Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
- Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
-# Test case 9: test is string with space and !
->>> text_indentation(" Black!")
- Black!
+testin with blank space at the start of the text
+::
+>>> text_indentation("""   Hello:    world?""")
+Hello:
+<BLANKLINE>
+world?
+<BLANKLINE>
 
-Test case 10: test with two strings 
->>> text_indentation("Hello", "World")
+testint with blank line at the end of text
+::
+>>> text_indentation("""Hello:    world?    """)
+Hello:
+<BLANKLINE>
+world?
+<BLANKLINE>
+
+testing with only special characters
+::
+>>> text_indentation(""":?.""")
+:
+<BLANKLINE>
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+
+testing with no special character
+::
+>>> text_indentation("""hello world there is no special character""")
+hello world there is no special character
+
+=============
+TEST WITH FAILURE
+=============
+
+testing None 
+::
+>>> text_indentation(None)
 Traceback (most recent call last):
-TypeError: text_indentation() takes 1 positional argument but 2 were given
+TypeError: text must be a string
 
-Test case 11: test is empty
->>> text_indentation()
+testing too much argument
+::
+>>> text_indentation("blabla", "blibli", "bloblo")
 Traceback (most recent call last):
-TypeError: text_indentation() missing 1 required positional argument: 'text'
+TypeError: text_indentation() takes 1 positional argument but 3 were given
 
-Test case 12: test with Bool
+testing with bolean
+::
 >>> text_indentation(True)
 Traceback (most recent call last):
 TypeError: text must be a string
 
-Test case 13: test with space at end
->>> text_indentation("Black ")
-Black 
+testing a dictionnary
+::
+>>> text_indentation({1, 2, 3, 4})
+Traceback (most recent call last):
+TypeError: text must be a string
+
+testing with nothing
+::
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
