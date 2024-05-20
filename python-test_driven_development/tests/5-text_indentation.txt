@@ -81,5 +81,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 >>> text_indentation("Black is everywhere")
 Black is everywhere
 
-Test case 11: Test is empty
->>> text_indentation("")
+Test case 11: test with two strings 
+>>> text_indentation("Hello", "World")
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 2 were given
