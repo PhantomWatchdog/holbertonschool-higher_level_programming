@@ -74,14 +74,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
 # Test case 9: test is string with space and !
->>> text_indentation("Black!")
-Black!
+>>> text_indentation(" Black!")
+ Black!
 
 # Test case 10: test is string with no special characters
 >>> text_indentation("Black is everywhere")
 Black is everywhere
 
 Test case 11: Test is empty
->>> text_indentation()
-Traceback (most recent call last):
-TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation("")

@@ -82,9 +82,9 @@ Expecting:
      Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 ok
 Trying:
-    text_indentation("Black!")
+    text_indentation(" Black!")
 Expecting:
-    Black!
+     Black!
 ok
 Trying:
     text_indentation("Black is everywhere")
@@ -92,19 +92,18 @@ Expecting:
     Black is everywhere
 ok
 Trying:
-    text_indentation()
-Expecting nothing
+    text_indentation("")
+Expecting:
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
 **********************************************************************
 File "./tests/5-text_indentation.txt", line 85, in 5-text_indentation.txt
 Failed example:
-    text_indentation()
-Exception raised:
+    text_indentation("")
+Expected:
     Traceback (most recent call last):
-      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 5-text_indentation.txt[11]>", line 1, in <module>
-        text_indentation()
     TypeError: text_indentation() missing 1 required positional argument: 'text'
+Got nothing
 **********************************************************************
 1 items had failures:
    1 of  12 in 5-text_indentation.txt
