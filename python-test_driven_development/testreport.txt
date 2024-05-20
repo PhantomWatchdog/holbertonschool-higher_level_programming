@@ -1,61 +1,32 @@
 Trying:
-    print_square = __import__('4-print_square').print_square
+    text_indentation = __import__('5-text_indentation').text_indentation
 Expecting nothing
 ok
 Trying:
-    print_square(0)
-Expecting nothing
-ok
-Trying:
-    print_square(3)
-Expecting:
-    ###
-    ###
-    ###
-ok
-Trying:
-    print_square(4.5)
+    text_indentation(2)
 Expecting:
     Traceback (most recent call last):
-    TypeError: size must be an integer
+    TypeError: text must be a string
 ok
 Trying:
-    print_square("World")
-Expecting:
-    Traceback (most recent call last):
-    TypeError: size must be an integer
-ok
-Trying:
-    print_square(None)
-Expecting:
-    Traceback (most recent call last):
-    TypeError: size must be an integer
-ok
-Trying:
-    print_square()
-Expecting:
-    Traceback (most recent call last):
-    TypeError: print_square() missing 1 required positional argument: 'size'
-ok
-Trying:
-    print_square(-4)
-Expecting:
-    Traceback (most recent call last):
-    ValueError: size must be >= 0
-ok
-Trying:
-    print_square(True)
+    text_indentation(None)
 Expecting nothing
 **********************************************************************
-File "./tests/4-print_square.txt", line 40, in 4-print_square.txt
+File "./tests/5-text_indentation.txt", line 11, in 5-text_indentation.txt
 Failed example:
-    print_square(True)
-Expected nothing
-Got:
-    #
+    text_indentation(None)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 5-text_indentation.txt[2]>", line 1, in <module>
+        text_indentation(None)
+      File "/home/phantomwatchdog/holbertonschool-higher_level_programming/python-test_driven_development/5-text_indentation.py", line 21, in text_indentation
+        raise TypeError("text must be a string")
+    TypeError: text must be a string
 **********************************************************************
 1 items had failures:
-   1 of   9 in 4-print_square.txt
-9 tests in 1 items.
-8 passed and 1 failed.
+   1 of   3 in 5-text_indentation.txt
+3 tests in 1 items.
+2 passed and 1 failed.
 ***Test Failed*** 1 failures.
