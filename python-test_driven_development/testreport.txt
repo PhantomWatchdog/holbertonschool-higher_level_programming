@@ -1,210 +1,36 @@
 Trying:
-    matrix_divided = __import__('2-matrix_divided').matrix_divided
+    say_my_name = __import__('3-say_my_name').say_my_name
 Expecting nothing
 ok
 Trying:
-    matrix = [[1, 2], [3, 4]]
-Expecting nothing
-ok
-Trying:
-    divisor = 2
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
-Expecting:
-    [[0.5, 1.0], [1.5, 2.0]]
-ok
-Trying:
-    matrix = [[10, 20, 30], [40, 50, 60], [70, 80, 90]]
-Expecting nothing
-ok
-Trying:
-    divisor = 3
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
-Expecting:
-    [[3.33, 6.67, 10.0], [13.33, 16.67, 20.0], [23.33, 26.67, 30.0]]
-ok
-Trying:
-    matrix = [[100]]
-Expecting nothing
-ok
-Trying:
-    divisor = 5
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
-Expecting:
-    [[20.0]]
-ok
-Trying:
-    matrix = [[1.5, 3.0], [4.5, 6.0]]
-Expecting nothing
-ok
-Trying:
-    divisor = 1.5
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
-Expecting:
-    [[1.0, 2.0], [3.0, 4.0]]
-ok
-Trying:
-    matrix = [[1, 2], [3, 4]]
-Expecting nothing
-ok
-Trying:
-    divisor = 0
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
+    say_my_name(35, "Black")
 Expecting:
     Traceback (most recent call last):
-    ZeroDivisionError: division by zero
+    TypeError: first_name must be a string
 ok
 Trying:
-    matrix = [[1, 2], [3, 4]]
-Expecting nothing
-ok
-Trying:
-    divisor = '2'
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
+    say_my_name("John", 35)
 Expecting:
     Traceback (most recent call last):
-    TypeError: div must be a number
+    TypeError: last_name must be a string
 ok
 Trying:
-    matrix = []
-Expecting nothing
-ok
-Trying:
-    divisor = 2
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
+    say_my_name("John", "Black")
 Expecting:
     Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-ok
-Trying:
-    matrix = [[1, 2], [3, 4, 5]]
-Expecting nothing
-ok
-Trying:
-    divisor = 2
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
-Expecting:
-    Traceback (most recent call last):
-    TypeError: Each row of the matrix must have the same size
-ok
-Trying:
-    matrix = [[1, 2], [3, '4']]
-Expecting nothing
-ok
-Trying:
-    divisor = 3
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
-Expecting:
-    Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-ok
-Trying:
-    matrix = [[1, 2], [5, 6]]
-Expecting nothing
-ok
-Trying:
-    divisor = float('inf')
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
-Expecting:
-    [[0.0, 0.0], [0.0, 0.0]]
-ok
-Trying:
-    matrix = [[1, 2], [5, 6]]
-Expecting nothing
-ok
-Trying:
-    divisor = 2
-Expecting nothing
-ok
-Trying:
-    matrix_divided(None, 2)
-Expecting:
-    Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-ok
-Trying:
-    matrix = ["World"]
-Expecting nothing
-ok
-Trying:
-    divisor = 2
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
-Expecting:
-    Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-ok
-Trying:
-    matrix = [[1, 2], [5, 6]]
-Expecting nothing
-ok
-Trying:
-    divisor = -5
-Expecting nothing
-ok
-Trying:
-    matrix_divided(matrix, divisor)
-Expecting:
-    [[-0.2, -0.4], [-1.0, -1.2]]
-ok
-Trying:
-    matrix = [[1, 2], [5, 6]]
-Expecting nothing
-ok
-Trying:
-    divisor = 2
-Expecting nothing
-ok
-Trying:
-    matrix_divided(None, None)
-Expecting nothing
+    NameError: name 'Black' is not defined
 **********************************************************************
-File "./tests/2-matrix_divided.txt", line 95, in 2-matrix_divided.txt
+File "./tests/3-say_my_name.txt", line 15, in 3-say_my_name.txt
 Failed example:
-    matrix_divided(None, None)
-Exception raised:
+    say_my_name("John", "Black")
+Expected:
     Traceback (most recent call last):
-      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 2-matrix_divided.txt[42]>", line 1, in <module>
-        matrix_divided(None, None)
-      File "/home/phantomwatchdog/holbertonschool-higher_level_programming/python-test_driven_development/2-matrix_divided.py", line 28, in matrix_divided
-        raise TypeError(error_msg)
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    NameError: name 'Black' is not defined
+Got:
+    My name is John Black
 **********************************************************************
 1 items had failures:
-   1 of  43 in 2-matrix_divided.txt
-43 tests in 1 items.
-42 passed and 1 failed.
+   1 of   4 in 3-say_my_name.txt
+4 tests in 1 items.
+3 passed and 1 failed.
 ***Test Failed*** 1 failures.
