@@ -91,3 +91,7 @@ Test case 12: test with Bool
 >>> text_indentation(True)
 Traceback (most recent call last):
 TypeError: text must be a string
+
+Test case 13: test with space at end
+>>> text_indentation("Black ")
+Black 
