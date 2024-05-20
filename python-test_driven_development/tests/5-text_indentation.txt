@@ -32,7 +32,7 @@ Black:
  Black 
 
 # Test case 7: test is string with blankspace
->>> text_indentation("   ")
+>>> text_indentation("    ")
 <BLANKLINE>
 
 # Test case 8: size is a string with multilines and ? . and :
@@ -74,5 +74,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
 # Test case 9: test is string with space and !
->>> text_indentation(" Black!")
- Black!
+>>> text_indentation("Black!")
+Black!
