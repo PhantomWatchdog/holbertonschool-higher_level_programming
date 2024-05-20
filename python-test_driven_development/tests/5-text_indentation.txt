@@ -87,7 +87,7 @@ Test case 11: test is empty
 Traceback (most recent call last):
 TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-Test case 12: test with x arguments
->>> text_indentation("blabla", "blibli", "bloblo")
+Test case 12: test with Bool
+>>> text_indentation(True)
 Traceback (most recent call last):
-TypeError: text_indentation() takes 1 positional argument but 3 were given
+TypeError: text must be a string
