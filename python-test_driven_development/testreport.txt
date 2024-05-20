@@ -87,11 +87,6 @@ Expecting:
      Black!
 ok
 Trying:
-    text_indentation("Black is everywhere")
-Expecting:
-    Black is everywhere
-ok
-Trying:
     text_indentation("Hello", "World")
 Expecting:
     Traceback (most recent call last):
@@ -99,17 +94,19 @@ Expecting:
 ok
 Trying:
     text_indentation("Hello \n")
-Expecting nothing
+Expecting:
+    Hello
 **********************************************************************
-File "./tests/5-text_indentation.txt", line 90, in 5-text_indentation.txt
+File "./tests/5-text_indentation.txt", line 86, in 5-text_indentation.txt
 Failed example:
     text_indentation("Hello \n")
-Expected nothing
+Expected:
+    Hello
 Got:
     Hello 
 **********************************************************************
 1 items had failures:
-   1 of  13 in 5-text_indentation.txt
-13 tests in 1 items.
-12 passed and 1 failed.
+   1 of  12 in 5-text_indentation.txt
+12 tests in 1 items.
+11 passed and 1 failed.
 ***Test Failed*** 1 failures.
