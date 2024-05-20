@@ -27,9 +27,9 @@ Black?
 Black:
 <BLANKLINE>
 
-# Test case 6: text is string with space
->>> text_indentation(" Black ")
- Black 
+# Test case 6: text is string with space at start
+>>> text_indentation(" Black")
+ Black
 
 # Test case 7: test is string with blankspace
 >>> text_indentation("    ")
