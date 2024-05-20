@@ -51,8 +51,26 @@ Expecting:
     Traceback (most recent call last):
     TypeError: a must be an integer
 ok
-1 items passed all tests:
-  10 tests in 0-add_integer.txt
-10 tests in 1 items.
-10 passed and 0 failed.
-Test passed.
+Trying:
+    add_integer(float('NaN'))
+Expecting nothing
+**********************************************************************
+File "./tests/0-add_integer.txt", line 50, in 0-add_integer.txt
+Failed example:
+    add_integer(float('NaN'))
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 0-add_integer.txt[10]>", line 1, in <module>
+        add_integer(float('NaN'))
+      File "/home/phantomwatchdog/holbertonschool-higher_level_programming/python-test_driven_development/0-add_integer.py", line 17, in add_integer
+        return int(a) + int(b)
+               ^^^^^^
+    ValueError: cannot convert float NaN to integer
+**********************************************************************
+1 items had failures:
+   1 of  11 in 0-add_integer.txt
+11 tests in 1 items.
+10 passed and 1 failed.
+***Test Failed*** 1 failures.

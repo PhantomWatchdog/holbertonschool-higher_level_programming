@@ -45,3 +45,8 @@ Test case add two strings
 >>> add_integer("Hello", "World")
 Traceback (most recent call last):
 TypeError: a must be an integer
+
+Test case add NaN
+>>> add_integer(float('NaN'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
