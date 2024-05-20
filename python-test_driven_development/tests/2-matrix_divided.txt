@@ -88,3 +88,10 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> divisor = -5
 >>> matrix_divided(matrix, divisor)
 [[-0.2, -0.4], [-1.0, -1.2]]
+
+# Test case 14: None arguments
+>>> matrix = [[1, 2], [5, 6]]
+>>> divisor = 2
+>>> matrix_divided(None, None)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats

@@ -175,17 +175,36 @@ Expecting nothing
 ok
 Trying:
     matrix_divided(matrix, divisor)
+Expecting:
+    [[-0.2, -0.4], [-1.0, -1.2]]
+ok
+Trying:
+    matrix = [[1, 2], [5, 6]]
+Expecting nothing
+ok
+Trying:
+    divisor = 2
+Expecting nothing
+ok
+Trying:
+    matrix_divided(None, None)
 Expecting nothing
 **********************************************************************
-File "./tests/2-matrix_divided.txt", line 89, in 2-matrix_divided.txt
+File "./tests/2-matrix_divided.txt", line 95, in 2-matrix_divided.txt
 Failed example:
-    matrix_divided(matrix, divisor)
-Expected nothing
-Got:
-    [[-0.2, -0.4], [-1.0, -1.2]]
+    matrix_divided(None, None)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 2-matrix_divided.txt[42]>", line 1, in <module>
+        matrix_divided(None, None)
+      File "/home/phantomwatchdog/holbertonschool-higher_level_programming/python-test_driven_development/2-matrix_divided.py", line 28, in matrix_divided
+        raise TypeError(error_msg)
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 **********************************************************************
 1 items had failures:
-   1 of  40 in 2-matrix_divided.txt
-40 tests in 1 items.
-39 passed and 1 failed.
+   1 of  43 in 2-matrix_divided.txt
+43 tests in 1 items.
+42 passed and 1 failed.
 ***Test Failed*** 1 failures.
