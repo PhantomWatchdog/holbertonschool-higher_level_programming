@@ -1,0 +1,32 @@
+# Test function printing a square with the character #
+
+>>> print_square = __import__('4-print_square').print_square
+
+# Test case 1: Check result for size 0
+>>> print_square(0)
+
+# Test case 2: Check result for size 4
+>>> print_square(3)
+###
+###
+###
+
+# Test case 3: Check for size 4.5
+>>> print_square(4.5)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+# Test case 4: Check for size "World"
+>>> print_square("World")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+# Test case 5: Check for size None
+>>> print_square(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+# Test case 6: Check for size empty
+>>> print_square()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'
