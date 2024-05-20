@@ -68,8 +68,33 @@ Expecting:
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
 ok
-1 items passed all tests:
-  16 tests in 2-matrix_divided.txt
-16 tests in 1 items.
-16 passed and 0 failed.
-Test passed.
+Trying:
+    matrix = [[1, 2], [3, 4]]
+Expecting nothing
+ok
+Trying:
+    divisor = '2'
+Expecting nothing
+ok
+Trying:
+    matrix_divided(matrix, divisor)
+Expecting nothing
+**********************************************************************
+File "./tests/2-matrix_divided.txt", line 41, in 2-matrix_divided.txt
+Failed example:
+    matrix_divided(matrix, divisor)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 2-matrix_divided.txt[18]>", line 1, in <module>
+        matrix_divided(matrix, divisor)
+      File "/home/phantomwatchdog/holbertonschool-higher_level_programming/python-test_driven_development/2-matrix_divided.py", line 43, in matrix_divided
+        raise TypeError("div must be a number")
+    TypeError: div must be a number
+**********************************************************************
+1 items had failures:
+   1 of  19 in 2-matrix_divided.txt
+19 tests in 1 items.
+18 passed and 1 failed.
+***Test Failed*** 1 failures.

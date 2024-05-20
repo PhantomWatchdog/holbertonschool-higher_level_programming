@@ -34,3 +34,10 @@
 >>> matrix_divided(matrix, divisor)
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
+
+# Test case 6: Dividing each element of 2x2 matrix by '2'
+>>> matrix = [[1, 2], [3, 4]]
+>>> divisor = '2'
+>>> matrix_divided(matrix, divisor)
+Traceback (most recent call last):
+TypeError: div must be a number
