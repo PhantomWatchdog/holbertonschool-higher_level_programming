@@ -18,6 +18,10 @@ ___________________________________________________
 >>> add_integer(3, -1)
 2
 
+# Test case substraction for one int and one float
+>>> add_integer(50.5, -2)
+48
+
 # Test case add value to default b value
 >>> add_integer(2)
 100
