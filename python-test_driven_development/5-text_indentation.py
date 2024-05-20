@@ -17,19 +17,20 @@ def text_indentation(text):
     Returns:
         None. The function prints the modified text with added new lines.
     """
-    if not isinstance(text, str):
+
+    if type(text) is not str:
         raise TypeError("text must be a string")
-    char = ""
-    for i in text:
-        if i == " " and i == text[0] and char == "":
-            char = "\n"
-            continue
-        if i == " " and char == "\n":
-            continue
-        if i in [".", "?", ":"]:
-            print(i)
-            print()
-            char = "\n"
-        else:
-            print(i, end="")
-            char = i
+    i = 0
+    for char in text:
+        if i == 0:
+            if char == " ":
+                continue
+            else:
+                i = 1
+        if i == 1:
+            if char in [".", "?", ":"]:
+                print((char))
+                print()
+                i = 0
+            else:
+                print((char), end=(""))
