@@ -161,23 +161,31 @@ Expecting nothing
 ok
 Trying:
     matrix_divided(matrix, divisor)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+ok
+Trying:
+    matrix = [[1, 2], [5, 6]]
+Expecting nothing
+ok
+Trying:
+    divisor = -5
+Expecting nothing
+ok
+Trying:
+    matrix_divided(matrix, divisor)
 Expecting nothing
 **********************************************************************
-File "./tests/2-matrix_divided.txt", line 82, in 2-matrix_divided.txt
+File "./tests/2-matrix_divided.txt", line 89, in 2-matrix_divided.txt
 Failed example:
     matrix_divided(matrix, divisor)
-Exception raised:
-    Traceback (most recent call last):
-      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 2-matrix_divided.txt[36]>", line 1, in <module>
-        matrix_divided(matrix, divisor)
-      File "/home/phantomwatchdog/holbertonschool-higher_level_programming/python-test_driven_development/2-matrix_divided.py", line 34, in matrix_divided
-        raise TypeError(error_msg)
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+Expected nothing
+Got:
+    [[-0.2, -0.4], [-1.0, -1.2]]
 **********************************************************************
 1 items had failures:
-   1 of  37 in 2-matrix_divided.txt
-37 tests in 1 items.
-36 passed and 1 failed.
+   1 of  40 in 2-matrix_divided.txt
+40 tests in 1 items.
+39 passed and 1 failed.
 ***Test Failed*** 1 failures.
