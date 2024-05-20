@@ -1,0 +1,23 @@
+# Test for function that divides all elements of a matrix by a given number
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# Test case 1: Dividing each element of a 2x2 matrix by 2
+>>> matrix1 = [[1, 2], [3, 4]]
+>>> divisor1 = 2
+>>> matrix_divided(matrix1, divisor1)
+[[0.5, 1.0], [1.5, 2.0]]
+
+
+# Test case 2: Dividing each element of a 3x3 matrix by 3
+>>> matrix2 = [[10, 20, 30], [40, 50, 60], [70, 80, 90]]
+>>> divisor2 = 3
+>>> matrix_divided(matrix2, divisor2)
+[[3.33, 6.67, 10.0], [13.33, 16.67, 20.0], [23.33, 26.67, 30.0]]
+
+
+# Test case 3: Dividing each element of a 1x1 matrix by 5
+>>> matrix3 = [[100]]
+>>> divisor3 = 5
+>>> matrix_divided(matrix3, divisor3)
+[[20.0]]
