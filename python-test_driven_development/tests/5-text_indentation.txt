@@ -76,3 +76,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 # Test case 9: test is string with space and !
 >>> text_indentation("Black!")
 Black!
+
+# Test case 10: test is string with only special characters
+>>> text_indentation(".:?")
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+<BLANKLINE>
