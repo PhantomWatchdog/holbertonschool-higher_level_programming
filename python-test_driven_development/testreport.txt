@@ -82,15 +82,17 @@ Expecting:
      Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 ok
 Trying:
-    text_indentation("Black!")
-Expecting nothing
+    text_indentation(" Black!")
+Expecting:
+    Black!
 **********************************************************************
 File "./tests/5-text_indentation.txt", line 77, in 5-text_indentation.txt
 Failed example:
-    text_indentation("Black!")
-Expected nothing
-Got:
+    text_indentation(" Black!")
+Expected:
     Black!
+Got:
+     Black!
 **********************************************************************
 1 items had failures:
    1 of  10 in 5-text_indentation.txt

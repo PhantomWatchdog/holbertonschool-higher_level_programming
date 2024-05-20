@@ -73,6 +73,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <BLANKLINE>
  Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
-# Test case 9: test is string with !
->>> text_indentation("Black!")
-Black!
+# Test case 9: test is string with space and !
+>>> text_indentation(" Black!")
+ Black!
