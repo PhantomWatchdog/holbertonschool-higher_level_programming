@@ -77,12 +77,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 >>> text_indentation(" Black!")
  Black!
 
-Test case 11: test with two strings 
+Test case 10: test with two strings 
 >>> text_indentation("Hello", "World")
 Traceback (most recent call last):
 TypeError: text_indentation() takes 1 positional argument but 2 were given
 
-Test case 12: test is empty
+Test case 11: test is empty
 >>> text_indentation()
 Traceback (most recent call last):
 TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test case 12: test with x arguments
+>>> text_indentation("blabla", "blibli", "bloblo")
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 3 were given
