@@ -35,20 +35,27 @@ Trying:
     print_square()
 Expecting:
     Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+ok
+Trying:
+    print_square(-4)
+Expecting nothing
 **********************************************************************
-File "./tests/4-print_square.txt", line 30, in 4-print_square.txt
+File "./tests/4-print_square.txt", line 35, in 4-print_square.txt
 Failed example:
-    print_square()
+    print_square(-4)
 Exception raised:
     Traceback (most recent call last):
       File "/usr/lib/python3.12/doctest.py", line 1361, in __run
         exec(compile(example.source, filename, "single",
-      File "<doctest 4-print_square.txt[6]>", line 1, in <module>
-        print_square()
-    TypeError: print_square() missing 1 required positional argument: 'size'
+      File "<doctest 4-print_square.txt[7]>", line 1, in <module>
+        print_square(-4)
+      File "/home/phantomwatchdog/holbertonschool-higher_level_programming/python-test_driven_development/4-print_square.py", line 13, in print_square
+        raise ValueError("size must be >= 0")
+    ValueError: size must be >= 0
 **********************************************************************
 1 items had failures:
-   1 of   7 in 4-print_square.txt
-7 tests in 1 items.
-6 passed and 1 failed.
+   1 of   8 in 4-print_square.txt
+8 tests in 1 items.
+7 passed and 1 failed.
 ***Test Failed*** 1 failures.
