@@ -80,3 +80,8 @@ Black!
 # Test case 10: test is string with no special characters
 >>> text_indentation("Black is everywhere")
 Black is everywhere
+
+Test case 11: Test is empty
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
