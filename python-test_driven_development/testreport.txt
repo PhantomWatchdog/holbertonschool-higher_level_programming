@@ -1,0 +1,52 @@
+Trying:
+    add_integer = __import__('0-add_integer').add_integer
+Expecting nothing
+ok
+Trying:
+    add_integer(0, 0)
+Expecting:
+    0
+ok
+Trying:
+    add_integer(5, 5)
+Expecting:
+    10
+ok
+Trying:
+    add_integer(3, -1)
+Expecting:
+    2
+ok
+Trying:
+    add_integer(2)
+Expecting:
+    100
+ok
+Trying:
+    add_integer(1.5, 1.5)
+Expecting:
+    2
+ok
+Trying:
+    add_integer()
+Expecting:
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+ok
+Trying:
+    add_integer(5, "Hello")
+Expecting:
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+ok
+Trying:
+    add_integer("Hello", "World")
+Expecting:
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+ok
+1 items passed all tests:
+   9 tests in 0-add_integer.txt
+9 tests in 1 items.
+9 passed and 0 failed.
+Test passed.
