@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""
-Module for add_integer
+""" Module for add_integer function.
+    This module provides a simple function, add_integer(a, b),
+    that adds two integers.
 """
 
 
