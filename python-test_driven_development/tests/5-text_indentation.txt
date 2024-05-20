@@ -1,15 +1,11 @@
-============================
-doctest for 5-text_indentation.py
-============================
-``text_indentation()`` prints text with two newlines after '.' '?' or ':'
+# Test function printing text with 2 \n after each specified characters
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 SUCCESSFUL TEST CONDITIONS
 ==========================
 
-testing with marker '.' '?' and ':'
-::
+Test case 1: with marker '.' '?' and ':'
 >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
 ... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
@@ -47,24 +43,21 @@ Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
-testin with blank space at the start of the text
-::
+Test case 2: with blank space at the start of the text
 >>> text_indentation("""   Hello:    world?""")
 Hello:
 <BLANKLINE>
 world?
 <BLANKLINE>
 
-testint with blank line at the end of text
-::
+Test case 3: with blank line at the end of text
 >>> text_indentation("""Hello:    world?    """)
 Hello:
 <BLANKLINE>
 world?
 <BLANKLINE>
 
-testing with only special characters
-::
+Test case 4: with only special characters
 >>> text_indentation(""":?.""")
 :
 <BLANKLINE>
@@ -73,8 +66,7 @@ testing with only special characters
 .
 <BLANKLINE>
 
-testing with no special character
-::
+Test case 5: with no special character
 >>> text_indentation("""hello world there is no special character""")
 hello world there is no special character
 
@@ -82,32 +74,27 @@ hello world there is no special character
 TEST WITH FAILURE
 =============
 
-testing None 
-::
+Test case 6: None 
 >>> text_indentation(None)
 Traceback (most recent call last):
 TypeError: text must be a string
 
-testing too much argument
-::
+Test case 7: too much argument
 >>> text_indentation("blabla", "blibli", "bloblo")
 Traceback (most recent call last):
 TypeError: text_indentation() takes 1 positional argument but 3 were given
 
-testing with bolean
-::
+Test case 8: with bolean
 >>> text_indentation(True)
 Traceback (most recent call last):
 TypeError: text must be a string
 
-testing a dictionnary
-::
+Test case 9: with a dictionnary
 >>> text_indentation({1, 2, 3, 4})
 Traceback (most recent call last):
 TypeError: text must be a string
 
-testing with nothing
-::
+Test case 10: with nothing
 >>> text_indentation()
 Traceback (most recent call last):
 TypeError: text_indentation() missing 1 required positional argument: 'text'
