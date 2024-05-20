@@ -31,8 +31,12 @@ TypeError: size must be an integer
 Traceback (most recent call last):
 TypeError: print_square() missing 1 required positional argument: 'size'
 
-# Test case 7: Check for size psoitive
+# Test case 7: Check for size positive
 >>> print_square(-4)
-  Traceback (most recent call last):
-  ValueError: size must be >= 0
-  
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+# Test case 8: Check for boolean
+>>> print_square(True)
+#
+>>> print_square(False)
