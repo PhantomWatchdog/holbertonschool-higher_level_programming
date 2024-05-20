@@ -16,3 +16,13 @@ TypeError: text must be a string
 >>> text_indentation("Black.")
 Black.
 <BLANKLINE>
+
+# Test case 4: text is a string with ?
+>>> text_indentation("Black?")
+Black?
+<BLANKLINE>
+
+# Test case 5: text is string with :
+>>> text_indentation("Black:")
+Black:
+<BLANKLINE>

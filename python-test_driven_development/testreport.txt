@@ -16,18 +16,30 @@ Expecting:
 ok
 Trying:
     text_indentation("Black.")
+Expecting:
+    Black.
+    <BLANKLINE>
+ok
+Trying:
+    text_indentation("Black?")
+Expecting:
+    Black?
+    <BLANKLINE>
+ok
+Trying:
+    text_indentation("Black:")
 Expecting nothing
 **********************************************************************
-File "./tests/5-text_indentation.txt", line 16, in 5-text_indentation.txt
+File "./tests/5-text_indentation.txt", line 26, in 5-text_indentation.txt
 Failed example:
-    text_indentation("Black.")
+    text_indentation("Black:")
 Expected nothing
 Got:
-    Black.
+    Black:
     <BLANKLINE>
 **********************************************************************
 1 items had failures:
-   1 of   4 in 5-text_indentation.txt
-4 tests in 1 items.
-3 passed and 1 failed.
+   1 of   6 in 5-text_indentation.txt
+6 tests in 1 items.
+5 passed and 1 failed.
 ***Test Failed*** 1 failures.
