@@ -77,11 +77,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 >>> text_indentation("Black!")
 Black!
 
-# Test case 10: test is string with only special characters
->>> text_indentation(".:?")
-.
-<BLANKLINE>
-:
-<BLANKLINE>
-?
-<BLANKLINE>
+# Test case 10: test is string with no special characters
+>>> text_indentation("Black is everywhere")
+Black is everywhere

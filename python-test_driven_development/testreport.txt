@@ -87,20 +87,15 @@ Expecting:
     Black!
 ok
 Trying:
-    text_indentation(".:?")
+    text_indentation("Black is everywhere")
 Expecting nothing
 **********************************************************************
 File "./tests/5-text_indentation.txt", line 81, in 5-text_indentation.txt
 Failed example:
-    text_indentation(".:?")
+    text_indentation("Black is everywhere")
 Expected nothing
 Got:
-    .
-    <BLANKLINE>
-    :
-    <BLANKLINE>
-    ?
-    <BLANKLINE>
+    Black is everywhere
 **********************************************************************
 1 items had failures:
    1 of  11 in 5-text_indentation.txt
