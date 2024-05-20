@@ -72,3 +72,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
  Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
+# Test case 9: test is string with !
+>>> text_indentation("Black!")
+Black!
