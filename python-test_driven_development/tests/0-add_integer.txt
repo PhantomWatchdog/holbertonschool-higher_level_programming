@@ -26,9 +26,10 @@ Test case add value to default b value
 >>> add_integer(2)
 100
 
-Test case addition of two float
->>> add_integer(1.5, 1.5)
-2
+Test case addition of float
+>>> add_integer(2, float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
 
 Test case no args
 >>> add_integer()

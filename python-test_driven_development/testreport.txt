@@ -18,14 +18,20 @@ Expecting:
     2
 ok
 Trying:
+    add_integer(50.5, -2)
+Expecting:
+    48
+ok
+Trying:
     add_integer(2)
 Expecting:
     100
 ok
 Trying:
-    add_integer(1.5, 1.5)
+    add_integer(2, float('inf'))
 Expecting:
-    2
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
 ok
 Trying:
     add_integer()
@@ -46,7 +52,7 @@ Expecting:
     TypeError: a must be an integer
 ok
 1 items passed all tests:
-   9 tests in 0-add_integer.txt
-9 tests in 1 items.
-9 passed and 0 failed.
+  10 tests in 0-add_integer.txt
+10 tests in 1 items.
+10 passed and 0 failed.
 Test passed.
