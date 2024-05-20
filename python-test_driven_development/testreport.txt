@@ -3,46 +3,67 @@ Trying:
 Expecting nothing
 ok
 Trying:
-    matrix1 = [[1, 2], [3, 4]]
+    matrix = [[1, 2], [3, 4]]
 Expecting nothing
 ok
 Trying:
-    divisor1 = 2
+    divisor = 2
 Expecting nothing
 ok
 Trying:
-    matrix_divided(matrix1, divisor1)
+    matrix_divided(matrix, divisor)
 Expecting:
     [[0.5, 1.0], [1.5, 2.0]]
 ok
 Trying:
-    matrix2 = [[10, 20, 30], [40, 50, 60], [70, 80, 90]]
+    matrix = [[10, 20, 30], [40, 50, 60], [70, 80, 90]]
 Expecting nothing
 ok
 Trying:
-    divisor2 = 3
+    divisor = 3
 Expecting nothing
 ok
 Trying:
-    matrix_divided(matrix2, divisor2)
+    matrix_divided(matrix, divisor)
 Expecting:
     [[3.33, 6.67, 10.0], [13.33, 16.67, 20.0], [23.33, 26.67, 30.0]]
 ok
 Trying:
-    matrix3 = [[100]]
+    matrix = [[100]]
 Expecting nothing
 ok
 Trying:
-    divisor3 = 5
+    divisor = 5
 Expecting nothing
 ok
 Trying:
-    matrix_divided(matrix3, divisor3)
+    matrix_divided(matrix, divisor)
 Expecting:
     [[20.0]]
 ok
-1 items passed all tests:
-  10 tests in 2-matrix_divided.txt
-10 tests in 1 items.
-10 passed and 0 failed.
-Test passed.
+Trying:
+    matrix = [[2, 4], [6, 8]]
+Expecting nothing
+ok
+Trying:
+    divisor = 1.5
+Expecting nothing
+ok
+Trying:
+    matrix_divided(matrix, divisor)
+Expecting:
+    [[1.0, 2.0], [3.0, 4.0]]
+**********************************************************************
+File "./tests/2-matrix_divided.txt", line 28, in 2-matrix_divided.txt
+Failed example:
+    matrix_divided(matrix, divisor)
+Expected:
+    [[1.0, 2.0], [3.0, 4.0]]
+Got:
+    [[1.33, 2.67], [4.0, 5.33]]
+**********************************************************************
+1 items had failures:
+   1 of  13 in 2-matrix_divided.txt
+13 tests in 1 items.
+12 passed and 1 failed.
+***Test Failed*** 1 failures.
