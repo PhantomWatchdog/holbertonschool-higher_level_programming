@@ -85,3 +85,7 @@ Test case 11: test with two strings
 >>> text_indentation("Hello", "World")
 Traceback (most recent call last):
 TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+Test case 12: test with \n
+>>> text_indentation("Hello \n")
+Hello
