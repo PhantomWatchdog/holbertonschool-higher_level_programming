@@ -4,9 +4,6 @@ This is the "1-rectangle" module.
 """
 
 
-from calendar import c
-
-
 class Rectangle:
     """
     This is the Rectangle class.
