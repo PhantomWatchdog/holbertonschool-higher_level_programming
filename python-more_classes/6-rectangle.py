@@ -4,9 +4,6 @@ This is the "1-rectangle" module.
 """
 
 
-import numbers
-
-
 class Rectangle:
     """
     This is the Rectangle class.
@@ -101,6 +98,16 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
+        """
+        Returns a string representation of the Rectangle object.
+
+        If either the width or height is 0, an empty string is returned.
+        Otherwise, a string is generated with '#' characters representing
+        the width of the rectangle, repeated for the height of the rectangle.
+
+        Returns:
+            str: A string representation of the Rectangle object.
+        """
         result = []
         if self.width == 0 or self.height == 0:
             return ""
@@ -109,8 +116,22 @@ class Rectangle:
         return "\n".join(result)
 
     def __repr__(self):
+        """
+        Returns a string representation of the Rectangle object.
+
+        The returned string includes the width and
+        height of the Rectangle object.
+
+        Returns:
+            str: A string representation of the Rectangle object.
+        """
         return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
+        """Destructor method for the Rectangle class.
+
+        Prints a farewell message and decrements
+        the number_of_instances attribute.
+        """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
