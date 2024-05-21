@@ -13,6 +13,7 @@ class TestMaxInteger(unittest.TestCase):
         """
         # Test case 1: List with positive integers
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        self.assertEqual(max_integer([4]), 4)
 
         # Test case 2: List with positive integers in descending order
         self.assertEqual(max_integer([4, 3, 2, 1]), 4)
