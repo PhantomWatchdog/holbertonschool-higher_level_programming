@@ -28,8 +28,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 2, 2, 3, 4]), 4)
 
         # Test case 6: Empty list and None
-        self.assertEqual(max_integer([]))
-        self.assertEqual(max_integer([1, 2, 3, None]))
+        self.assertIsNone(max_integer([]))
+        with self.assertRaises(TypeError):
+            max_integer([1, 2, 3, None])
 
         # Test case 7: List with a single element
         self.assertEqual(max_integer([5]), 5)
