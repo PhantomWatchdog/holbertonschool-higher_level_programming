@@ -14,15 +14,12 @@ class TestMaxInteger(unittest.TestCase):
         # Test case 1: List with positive integers
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([4]), 4)
-
-        # Test case 2: List with positive integers in descending order
         self.assertEqual(max_integer([4, 3, 2, 1]), 4)
+        self.assertEqual(max_integer([1, 2, 4, 3]), 4)
 
-        # Test case 3: List with negative integers
+        # Test case 3: List with negative integers and 0
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
-
-        # Test case 4: List with positive and negative integers
-        self.assertEqual(max_integer([-1, 2, -3, 4]), 4)
+        self.assertEqual(max_integer([-1, 2, -3, 4]), 0)
 
         # Test case 5: List with duplicate integers
         self.assertEqual(max_integer([1, 2, 2, 3, 4]), 4)
