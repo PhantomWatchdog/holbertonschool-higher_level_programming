@@ -74,7 +74,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    
+
     def area(self):
         """
         Returns the area of the rectangle.
@@ -83,12 +83,14 @@ class Rectangle:
         :rtype: int
         """
         return self.width * self.height
-    
-    def perimeter(self):
-            """
-            Returns the perimeter of the rectangle.
 
-            Returns:
-                The perimeter of the rectangle.
-            """
-            return 2 * (self.width + self.height)
+    def perimeter(self):
+        """
+        Returns the perimeter of the rectangle.
+
+        Returns:
+            The perimeter of the rectangle.
+        """
+        if self.width == 0 or self.height == 0:
+            return 0
+        return 2 * (self.width + self.height)
