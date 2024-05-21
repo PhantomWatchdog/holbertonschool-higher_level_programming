@@ -96,6 +96,8 @@ class Rectangle:
 
     def __str__(self):
         result = []
+        if self.width == 0 or self.height == 0:
+            return ""
         for _ in range(self.height):
             result.append("#" * self.width)
         return "\n".join(result)
