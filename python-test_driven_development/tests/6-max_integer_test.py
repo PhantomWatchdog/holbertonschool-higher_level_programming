@@ -31,3 +31,7 @@ class TestMaxInteger(unittest.TestCase):
 
         # Test case 7: List with a single element
         self.assertEqual(max_integer([5]), 5)
+        
+        # Test case 8: List with non-integer element
+        with self.assertRaises(TypeError):
+            max_integer([1, 2, 3, "a"])
