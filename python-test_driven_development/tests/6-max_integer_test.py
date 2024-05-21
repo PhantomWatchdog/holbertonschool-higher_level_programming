@@ -37,4 +37,4 @@ class TestMaxInteger(unittest.TestCase):
             max_integer([1, 2, 3, "a"])
         
         # Test case 10: List empty
-        self.assertEqual(max_integer(), None)
+        self.assertEqual(max_integer([]))
