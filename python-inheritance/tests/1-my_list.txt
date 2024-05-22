@@ -53,3 +53,12 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 >>> my_list = MyList()
 >>> print(my_list)
 []
+
+# Test case 7: List with dict.
+>>> my_list = MyList()
+>>> my_list.append({1, 10, 3})
+>>> print(my_list)
+[{1, 10, 3}]
+
+>>> my_list.print_sorted()
+[{1, 10, 3}]
