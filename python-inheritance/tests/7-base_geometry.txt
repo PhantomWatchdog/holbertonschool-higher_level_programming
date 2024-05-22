@@ -26,3 +26,7 @@ ValueError: width must be greater than 0
 >>> bg.integer_validator("invalid number", "number")
 Traceback (most recent call last):
 TypeError: invalid number must be an integer
+
+# Test case 6: Testing integer_validator with positive value
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", 5)
