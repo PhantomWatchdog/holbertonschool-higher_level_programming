@@ -6,7 +6,11 @@ Module for BaseGeometry class.
 
 class BaseGeometry:
     """
-    A class with a method.
+    A class representing a base geometry.
+
+    Methods:
+    - area(): Raises an Exception with the message 'area() is not implemented'.
+    - integer_validator(name, value): Validates the value.
     """
 
     def area(self):
@@ -18,7 +22,15 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """
-        Method that validates value.
+        Method that validates the value.
+
+        Parameters:
+        - name (str): The name of the value being validated.
+        - value (int): The value to be validated.
+
+        Raises:
+        - TypeError: If the value is not an integer.
+        - ValueError: If the value is less than or equal to 0.
         """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
@@ -28,12 +40,20 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """
-    A class with a method.
+    A class representing a rectangle.
+
+    Attributes:
+        __width (int): The width of the rectangle.
+        __height (int): The height of the rectangle.
     """
 
     def __init__(self, width, height):
         """
-        Constructor method.
+        Constructor method for Rectangle class.
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
         """
 
         self.integer_validator("width", width)
