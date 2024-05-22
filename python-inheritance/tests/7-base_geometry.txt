@@ -13,9 +13,9 @@ Exception: area() is not implemented
     object at...>>
 
 # Test case 3: Testing integer_validator() method with invalid input (non-integer)
->>> bg.integer_validator("width", "5")
+>>> bg.integer_validator("name", "5")
 Traceback (most recent call last):
-TypeError: width must be an integer
+TypeError: name must be an integer
 
 # Test case 4: Testing integer_validator() method with invalid input (negative value)
 >>> bg.integer_validator("width", -5)
