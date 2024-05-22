@@ -85,24 +85,17 @@ Expecting:
     TypeError: name must be an integer
 ok
 Trying:
-    bg.integer_validator("distance", -4)
+    bg = BaseGeometry()
 Expecting nothing
-**********************************************************************
-File "./tests/7-base_geometry.txt", line 59, in 7-base_geometry.txt
-Failed example:
-    bg.integer_validator("distance", -4)
-Exception raised:
+ok
+Trying:
+    bg.integer_validator("name")
+Expecting:
     Traceback (most recent call last):
-      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 7-base_geometry.txt[17]>", line 1, in <module>
-        bg.integer_validator("distance", -4)
-      File "/home/phantomwatchdog/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 26, in integer_validator
-        raise ValueError("{} must be greater than 0".format(name))
-    ValueError: distance must be greater than 0
-**********************************************************************
-1 items had failures:
-   1 of  18 in 7-base_geometry.txt
-18 tests in 1 items.
-17 passed and 1 failed.
-***Test Failed*** 1 failures.
+    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+ok
+1 items passed all tests:
+  19 tests in 7-base_geometry.txt
+19 tests in 1 items.
+19 passed and 0 failed.
+Test passed.
