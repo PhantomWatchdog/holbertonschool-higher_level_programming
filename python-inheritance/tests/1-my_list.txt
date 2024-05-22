@@ -1,0 +1,46 @@
+# Import the MyList class
+>>> MyList = __import__('1-my_list').MyList
+
+# Test case 1: Create an instance of MyList
+>>> my_list = MyList()
+
+# Test case 2: List with integers, print and print_sorted
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+# Test case 3: List with strings, print and print_sorted
+>>> my_list = MyList()
+>>> my_list.extend(['cherry', 'banana', 'apple'])
+>>> print(my_list)
+['cherry', 'banana', 'apple']
+
+>>> my_list.print_sorted()
+['apple', 'banana', 'cherry']
+
+# Test case 4: List with float and int types, print and print_sorted
+>>> my_list.extend([10.5, 'hello'])
+>>> print(my_list)
+['cherry', 'banana', 'apple', 10.5, 'hello']
+
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'float' and 'str'
+
+# Test case 5: List with duplicates
+>>> my_list = MyList()
+>>> my_list.extend([1, 4, 2, 3, 5])
+>>> my_list.extend([2, 5, 'apple'])
+>>> print(my_list)
+[1, 4, 2, 3, 5, 2, 5, 'apple']
+
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'

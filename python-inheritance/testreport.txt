@@ -1,0 +1,99 @@
+Trying:
+    MyList = __import__('1-my_list').MyList
+Expecting nothing
+ok
+Trying:
+    my_list = MyList()
+Expecting nothing
+ok
+Trying:
+    my_list.append(1)
+Expecting nothing
+ok
+Trying:
+    my_list.append(4)
+Expecting nothing
+ok
+Trying:
+    my_list.append(2)
+Expecting nothing
+ok
+Trying:
+    my_list.append(3)
+Expecting nothing
+ok
+Trying:
+    my_list.append(5)
+Expecting nothing
+ok
+Trying:
+    print(my_list)
+Expecting:
+    [1, 4, 2, 3, 5]
+ok
+Trying:
+    my_list.print_sorted()
+Expecting:
+    [1, 2, 3, 4, 5]
+ok
+Trying:
+    my_list = MyList()
+Expecting nothing
+ok
+Trying:
+    my_list.extend(['cherry', 'banana', 'apple'])
+Expecting nothing
+ok
+Trying:
+    print(my_list)
+Expecting:
+    ['cherry', 'banana', 'apple']
+ok
+Trying:
+    my_list.print_sorted()
+Expecting:
+    ['apple', 'banana', 'cherry']
+ok
+Trying:
+    my_list.extend([10.5, 'hello'])
+Expecting nothing
+ok
+Trying:
+    print(my_list)
+Expecting:
+    ['cherry', 'banana', 'apple', 10.5, 'hello']
+ok
+Trying:
+    my_list.print_sorted()
+Expecting:
+    Traceback (most recent call last):
+    TypeError: '<' not supported between instances of 'float' and 'str'
+ok
+Trying:
+    my_list = MyList()
+Expecting nothing
+ok
+Trying:
+    my_list.extend([1, 4, 2, 3, 5])
+Expecting nothing
+ok
+Trying:
+    my_list.extend([2, 5, 'apple'])
+Expecting nothing
+ok
+Trying:
+    print(my_list)
+Expecting:
+    [1, 4, 2, 3, 5, 2, 5, 'apple']
+ok
+Trying:
+    my_list.print_sorted()
+Expecting:
+    Traceback (most recent call last):
+    TypeError: '<' not supported between instances of 'str' and 'int'
+ok
+1 items passed all tests:
+  21 tests in 1-my_list.txt
+21 tests in 1 items.
+21 passed and 0 failed.
+Test passed.

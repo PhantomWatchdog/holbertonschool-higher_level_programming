@@ -4,6 +4,9 @@ Module for MyList class.
 """
 
 
+from typing import Iterable
+
+
 class MyList(list):
     """
     A class that inherits from list.
@@ -13,7 +16,7 @@ class MyList(list):
         """
         Initializes a MyList object.
         """
-        pass
+        self.my_list = []
 
     def print_sorted(self):
         """
