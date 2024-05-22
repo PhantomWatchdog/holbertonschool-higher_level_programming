@@ -48,3 +48,8 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 >>> my_list.extend([2, 5, 'apple'])
 >>> print(my_list)
 [1, 4, 2, 3, 5, 2, 5, 'apple']
+
+# Test case 6: List empty
+>>> my_list = MyList()
+>>> print(my_list)
+[]
