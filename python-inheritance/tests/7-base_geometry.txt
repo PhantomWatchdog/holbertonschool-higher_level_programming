@@ -1,0 +1,23 @@
+# Import the BaseGeometry class
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+# Test case 1: Testing area() method
+>>> bg = BaseGeometry()
+>>> print(bg.area())
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+# Test case 2: Testing integer_validator() method with valid input
+>>> print(bg.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    <bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry 
+    object at...>>
+
+# Test case 3: Testing integer_validator() method with invalid input (non-integer)
+>>> bg.integer_validator("width", "5")
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+# Test case 4: Testing integer_validator() method with invalid input (negative value)
+>>> bg.integer_validator("width", -5)
+Traceback (most recent call last):
+ValueError: width must be greater than 0

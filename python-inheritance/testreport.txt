@@ -1,153 +1,37 @@
 Trying:
-    MyList = __import__('1-my_list').MyList
+    BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Expecting nothing
 ok
 Trying:
-    my_list = MyList()
+    bg = BaseGeometry()
 Expecting nothing
 ok
 Trying:
-    my_list.append(1)
-Expecting nothing
-ok
-Trying:
-    my_list.append(4)
-Expecting nothing
-ok
-Trying:
-    my_list.append(2)
-Expecting nothing
-ok
-Trying:
-    my_list.append(3)
-Expecting nothing
-ok
-Trying:
-    my_list.append(5)
-Expecting nothing
-ok
-Trying:
-    print(my_list)
-Expecting:
-    [1, 4, 2, 3, 5]
-ok
-Trying:
-    my_list.print_sorted()
-Expecting:
-    [1, 2, 3, 4, 5]
-ok
-Trying:
-    my_list = MyList(none)
+    print(bg.area())
 Expecting:
     Traceback (most recent call last):
-    NameError: name 'none' is not defined
+    Exception: area() is not implemented
 ok
 Trying:
-    print(my_list)
+    print(bg.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
 Expecting:
-    [1, 4, 2, 3, 5]
+        <bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry 
+        object at...>>
 ok
 Trying:
-    my_list.print_sorted()
-Expecting:
-    [1, 2, 3, 4, 5]
-ok
-Trying:
-    my_list = MyList()
-Expecting nothing
-ok
-Trying:
-    my_list.append('cherry')
-Expecting nothing
-ok
-Trying:
-    my_list.append('banana')
-Expecting nothing
-ok
-Trying:
-    my_list.append('apple')
-Expecting nothing
-ok
-Trying:
-    print(my_list)
-Expecting:
-    ['cherry', 'banana', 'apple']
-ok
-Trying:
-    my_list.print_sorted()
-Expecting:
-    ['apple', 'banana', 'cherry']
-ok
-Trying:
-    my_list.append(-10)
-Expecting nothing
-ok
-Trying:
-    my_list.append('Domain')
-Expecting nothing
-ok
-Trying:
-    print(my_list)
-Expecting:
-    ['cherry', 'banana', 'apple', -10, 'Domain']
-ok
-Trying:
-    my_list.print_sorted()
+    bg.integer_validator("width", "5")
 Expecting:
     Traceback (most recent call last):
-    TypeError: '<' not supported between instances of 'int' and 'str'
+    TypeError: width must be an integer
 ok
 Trying:
-    my_list = MyList()
-Expecting nothing
-ok
-Trying:
-    my_list.extend([1, 4, 2, 3, 5])
-Expecting nothing
-ok
-Trying:
-    my_list.extend([2, 5, 'apple'])
-Expecting nothing
-ok
-Trying:
-    print(my_list)
+    bg.integer_validator("width", -5)
 Expecting:
-    [1, 4, 2, 3, 5, 2, 5, 'apple']
-ok
-Trying:
-    my_list = MyList()
-Expecting nothing
-ok
-Trying:
-    print(my_list)
-Expecting:
-    []
-ok
-Trying:
-    my_list.print_sorted()
-Expecting:
-    []
-ok
-Trying:
-    my_list = MyList()
-Expecting nothing
-ok
-Trying:
-    my_list.append({1, 10, 3})
-Expecting nothing
-ok
-Trying:
-    print(my_list)
-Expecting:
-    [{1, 10, 3}]
-ok
-Trying:
-    my_list.print_sorted()
-Expecting:
-    [{1, 10, 3}]
+    Traceback (most recent call last):
+    ValueError: width must be greater than 0
 ok
 1 items passed all tests:
-  33 tests in 1-my_list.txt
-33 tests in 1 items.
-33 passed and 0 failed.
+   6 tests in 7-base_geometry.txt
+6 tests in 1 items.
+6 passed and 0 failed.
 Test passed.
