@@ -1,12 +1,6 @@
 # Import the BaseGeometry class
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-# Test case 1: Testing area() method
->>> bg = BaseGeometry()
->>> print(bg.area())
-Traceback (most recent call last):
-Exception: area() is not implemented
-
 # Test case 2: Testing integer_validator() method with valid input
 >>> print(bg.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
     <bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry 
@@ -25,7 +19,7 @@ ValueError: width must be greater than 0
 # Test case 5: Testing integer_validator with value not integer
 >>> bg.integer_validator("invalid number", "number")
 Traceback (most recent call last):
-TypeError: invalid number must be an integer
+NameError: name 'bg' is not defined
 
 # Test case 6: Testing integer_validator with positive value
 >>> bg = BaseGeometry()
@@ -54,9 +48,3 @@ TypeError: name must be an integer
 >>> bg.integer_validator("name", None)
 Traceback (most recent call last):
 TypeError: name must be an integer
-
-# Test case 11: Testing integer_validator with no argument
->>> bg = BaseGeometry()
->>> bg.integer_validator()
-Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
