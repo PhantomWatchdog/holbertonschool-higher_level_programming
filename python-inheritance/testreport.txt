@@ -30,8 +30,14 @@ Expecting:
     Traceback (most recent call last):
     ValueError: width must be greater than 0
 ok
+Trying:
+    bg.integer_validator("invalid number", "number")
+Expecting:
+    Traceback (most recent call last):
+    TypeError: invalid number must be an integer
+ok
 1 items passed all tests:
-   6 tests in 7-base_geometry.txt
-6 tests in 1 items.
-6 passed and 0 failed.
+   7 tests in 7-base_geometry.txt
+7 tests in 1 items.
+7 passed and 0 failed.
 Test passed.

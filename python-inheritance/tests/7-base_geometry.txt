@@ -21,3 +21,8 @@ TypeError: width must be an integer
 >>> bg.integer_validator("width", -5)
 Traceback (most recent call last):
 ValueError: width must be greater than 0
+
+# Test case 5: Testing integer_validator with value not integer
+>>> bg.integer_validator("invalid number", "number")
+Traceback (most recent call last):
+TypeError: invalid number must be an integer
