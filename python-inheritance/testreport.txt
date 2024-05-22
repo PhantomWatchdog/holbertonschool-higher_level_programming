@@ -3,89 +3,22 @@ Trying:
 Expecting nothing
 ok
 Trying:
-    print(bg.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
-Expecting:
-        <bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry 
-        object at...>>
-**********************************************************************
-File "./tests/7-base_geometry.txt", line 5, in 7-base_geometry.txt
-Failed example:
-    print(bg.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
-Exception raised:
-    Traceback (most recent call last):
-      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 7-base_geometry.txt[1]>", line 1, in <module>
-        print(bg.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
-              ^^
-    NameError: name 'bg' is not defined
+    bg = BaseGeometry()
+Expecting nothing
+ok
 Trying:
-    bg.integer_validator("name", "5")
-Expecting:
-    Traceback (most recent call last):
-    TypeError: name must be an integer
-**********************************************************************
-File "./tests/7-base_geometry.txt", line 10, in 7-base_geometry.txt
-Failed example:
-    bg.integer_validator("name", "5")
-Expected:
-    Traceback (most recent call last):
-    TypeError: name must be an integer
-Got:
-    Traceback (most recent call last):
-      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 7-base_geometry.txt[2]>", line 1, in <module>
-        bg.integer_validator("name", "5")
-        ^^
-    NameError: name 'bg' is not defined
-Trying:
-    bg.integer_validator("width", -5)
-Expecting:
-    Traceback (most recent call last):
-    ValueError: width must be greater than 0
-**********************************************************************
-File "./tests/7-base_geometry.txt", line 15, in 7-base_geometry.txt
-Failed example:
-    bg.integer_validator("width", -5)
-Expected:
-    Traceback (most recent call last):
-    ValueError: width must be greater than 0
-Got:
-    Traceback (most recent call last):
-      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 7-base_geometry.txt[3]>", line 1, in <module>
-        bg.integer_validator("width", -5)
-        ^^
-    NameError: name 'bg' is not defined
-Trying:
-    bg.integer_validator("invalid number", "number")
-Expecting:
-    Traceback (most recent call last):
-    TypeError: invalid number must be an integer
-**********************************************************************
-File "./tests/7-base_geometry.txt", line 20, in 7-base_geometry.txt
-Failed example:
-    bg.integer_validator("invalid number", "number")
-Expected:
-    Traceback (most recent call last):
-    TypeError: invalid number must be an integer
-Got:
-    Traceback (most recent call last):
-      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 7-base_geometry.txt[4]>", line 1, in <module>
-        bg.integer_validator("invalid number", "number")
-        ^^
-    NameError: name 'bg' is not defined
+    bg.integer_validator("name", 5)
+Expecting nothing
+ok
 Trying:
     bg = BaseGeometry()
 Expecting nothing
 ok
 Trying:
-    bg.integer_validator("age", 5)
-Expecting nothing
+    bg.integer_validator("name", "John")
+Expecting:
+    Traceback (most recent call last):
+    TypeError: name must be an integer
 ok
 Trying:
     bg = BaseGeometry()
@@ -122,14 +55,123 @@ Trying:
 Expecting nothing
 ok
 Trying:
+    bg.integer_validator("name", True)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+ok
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("age", 0)
+Expecting:
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+ok
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("distance", -4)
+Expecting:
+    Traceback (most recent call last):
+    ValueError: distance must be greater than 0
+ok
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
     bg.integer_validator("name", None)
 Expecting:
     Traceback (most recent call last):
     TypeError: name must be an integer
 ok
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("name")
+Expecting:
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+**********************************************************************
+File "./tests/7-base_geometry.txt", line 59, in 7-base_geometry.txt
+Failed example:
+    bg.integer_validator("name")
+Expected:
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+Got:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 7-base_geometry.txt[20]>", line 1, in <module>
+        bg.integer_validator("name")
+    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator()
+Expecting:
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+**********************************************************************
+File "./tests/7-base_geometry.txt", line 65, in 7-base_geometry.txt
+Failed example:
+    bg.integer_validator()
+Expected:
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+Got:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 7-base_geometry.txt[22]>", line 1, in <module>
+        bg.integer_validator()
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("name", 1, 2)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+**********************************************************************
+File "./tests/7-base_geometry.txt", line 71, in 7-base_geometry.txt
+Failed example:
+    bg.integer_validator("name", 1, 2)
+Expected:
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+Got:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 7-base_geometry.txt[24]>", line 1, in <module>
+        bg.integer_validator("name", 1, 2)
+    TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    bg.area()
+Expecting:
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+ok
 **********************************************************************
 1 items had failures:
-   4 of  15 in 7-base_geometry.txt
-15 tests in 1 items.
-11 passed and 4 failed.
-***Test Failed*** 4 failures.
+   3 of  27 in 7-base_geometry.txt
+27 tests in 1 items.
+24 passed and 3 failed.
+***Test Failed*** 3 failures.
