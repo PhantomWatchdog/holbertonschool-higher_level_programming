@@ -4,9 +4,6 @@ Module for MyList class.
 """
 
 
-from typing import Iterable
-
-
 class MyList(list):
     """
     A class that inherits from list.
