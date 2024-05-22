@@ -41,7 +41,15 @@ Trying:
 Expecting nothing
 ok
 Trying:
-    my_list.extend(['cherry', 'banana', 'apple'])
+    my_list.append('cherry')
+Expecting nothing
+ok
+Trying:
+    my_list.append('banana')
+Expecting nothing
+ok
+Trying:
+    my_list.append('apple')
 Expecting nothing
 ok
 Trying:
@@ -55,19 +63,23 @@ Expecting:
     ['apple', 'banana', 'cherry']
 ok
 Trying:
-    my_list.extend([10.5, 'hello'])
+    my_list.append(-10)
+Expecting nothing
+ok
+Trying:
+    my_list.append('Domain')
 Expecting nothing
 ok
 Trying:
     print(my_list)
 Expecting:
-    ['cherry', 'banana', 'apple', 10.5, 'hello']
+    ['cherry', 'banana', 'apple', -10, 'Domain']
 ok
 Trying:
     my_list.print_sorted()
 Expecting:
     Traceback (most recent call last):
-    TypeError: '<' not supported between instances of 'float' and 'str'
+    TypeError: '<' not supported between instances of 'int' and 'str'
 ok
 Trying:
     my_list = MyList()
@@ -93,7 +105,7 @@ Expecting:
     TypeError: '<' not supported between instances of 'str' and 'int'
 ok
 1 items passed all tests:
-  21 tests in 1-my_list.txt
-21 tests in 1 items.
-21 passed and 0 failed.
+  24 tests in 1-my_list.txt
+24 tests in 1 items.
+24 passed and 0 failed.
 Test passed.
