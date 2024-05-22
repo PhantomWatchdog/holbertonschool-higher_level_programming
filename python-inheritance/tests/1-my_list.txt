@@ -53,6 +53,8 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 >>> my_list = MyList()
 >>> print(my_list)
 []
+>>> my_list.print_sorted()
+[]
 
 # Test case 7: List with dict.
 >>> my_list = MyList()
@@ -62,3 +64,14 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 
 >>> my_list.print_sorted()
 [{1, 10, 3}]
+
+# Test case 8: List with negative numbers
+>>> my_list = MyList()
+>>> my_list.append(-5)
+>>> my_list.append(-10)
+>>> my_list.append(-20)
+>>> my_list.append(-1)
+>>> print(my_list)
+[-5, -10, -20, -1]
+>>> my_list.print_sorted()
+[-20, -10, -5, -1]
