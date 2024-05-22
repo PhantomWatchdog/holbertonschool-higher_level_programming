@@ -64,8 +64,28 @@ Expecting:
     Traceback (most recent call last):
     TypeError: name must be an integer
 ok
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("name", {1, 2})
+Expecting:
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+ok
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("name", None)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+ok
 1 items passed all tests:
-  13 tests in 7-base_geometry.txt
-13 tests in 1 items.
-13 passed and 0 failed.
+  17 tests in 7-base_geometry.txt
+17 tests in 1 items.
+17 passed and 0 failed.
 Test passed.
