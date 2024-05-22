@@ -30,3 +30,9 @@ TypeError: invalid number must be an integer
 # Test case 6: Testing integer_validator with positive value
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("name", 5)
+
+# Test case 7: Testing integer_validator with a list
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", [1,2,3])
+Traceback (most recent call last):
+TypeError: name must be an integer

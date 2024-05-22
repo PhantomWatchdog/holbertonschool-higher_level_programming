@@ -44,8 +44,18 @@ Trying:
     bg.integer_validator("name", 5)
 Expecting nothing
 ok
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("name", [1,2,3])
+Expecting:
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+ok
 1 items passed all tests:
-   9 tests in 7-base_geometry.txt
-9 tests in 1 items.
-9 passed and 0 failed.
+  11 tests in 7-base_geometry.txt
+11 tests in 1 items.
+11 passed and 0 failed.
 Test passed.
