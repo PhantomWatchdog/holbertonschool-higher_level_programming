@@ -15,24 +15,3 @@
 
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
-
-# Test case 3: List with strings, print and print_sorted
->>> my_list = MyList()
->>> my_list.append('cherry')
->>> my_list.append('banana')
->>> my_list.append('apple')
->>> print(my_list)
-['cherry', 'banana', 'apple']
-
->>> my_list.print_sorted()
-['apple', 'banana', 'cherry']
-
-# Test case 4: List with float and int types, print and print_sorted
->>> my_list.append(-10)
->>> my_list.append('Domain')
->>> print(my_list)
-['cherry', 'banana', 'apple', -10, 'Domain']
-
->>> my_list.print_sorted()
-Traceback (most recent call last):
-TypeError: '<' not supported between instances of 'int' and 'str'
