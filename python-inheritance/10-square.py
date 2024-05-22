@@ -6,6 +6,7 @@ This module defines a class Rectangle that inherits from BaseGeometry.
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
     Represents a square shape.
