@@ -1,50 +1,79 @@
 # Import the BaseGeometry class
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-# Test case 2: Testing integer_validator() method with valid input
->>> print(bg.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
-    <bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry 
-    object at...>>
+# Test case 1: Value is positive
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", 5)
 
-# Test case 3: Testing integer_validator() method with invalid input (non-integer)
->>> bg.integer_validator("name", "5")
+
+# Test case 2: Value is a string
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 TypeError: name must be an integer
 
-# Test case 4: Testing integer_validator() method with invalid input (negative value)
->>> bg.integer_validator("width", -5)
-Traceback (most recent call last):
-ValueError: width must be greater than 0
-
-# Test case 5: Testing integer_validator with value not integer
->>> bg.integer_validator("invalid number", "number")
-Traceback (most recent call last):
-NameError: name 'bg' is not defined
-
-# Test case 6: Testing integer_validator with positive value
->>> bg = BaseGeometry()
->>> bg.integer_validator("age", 5)
-
-# Test case 7: Testing integer_validator with a list
+# Test case 3: Value is a list
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("name", [1,2,3])
 Traceback (most recent call last):
 TypeError: name must be an integer
 
-# Test case 8: Testing integer_validator with a tuple as value
+# Test case 4: Value is a tuple
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("name", (1,2))
 Traceback (most recent call last):
 TypeError: name must be an integer
 
-# Test case 9: Testing integer_validator with dict.
+# Test case 5: Value is a dictionnary
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("name", {1, 2})
 Traceback (most recent call last):
 TypeError: name must be an integer
 
-# Test case 10: Testing integer_validator with None
+# Test case 6: Value is a boolean
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", True)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+# Test case 7: Value is equal to 0
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+# Test case 8: Value is less than 0
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
+
+# Test case 9: Value is None
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("name", None)
 Traceback (most recent call last):
 TypeError: name must be an integer
+
+# Test case 10: Passing one argument
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+# Test case 11: Passing no argument
+>>> bg = BaseGeometry()
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+# Test case 12: Passing three arguments
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", 1, 2)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+# Test case 13: Print the area
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
