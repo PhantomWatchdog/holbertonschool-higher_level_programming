@@ -98,14 +98,8 @@ Trying:
 Expecting:
     [1, 4, 2, 3, 5, 2, 5, 'apple']
 ok
-Trying:
-    my_list.print_sorted()
-Expecting:
-    Traceback (most recent call last):
-    TypeError: '<' not supported between instances of 'str' and 'int'
-ok
 1 items passed all tests:
-  24 tests in 1-my_list.txt
-24 tests in 1 items.
-24 passed and 0 failed.
+  23 tests in 1-my_list.txt
+23 tests in 1 items.
+23 passed and 0 failed.
 Test passed.

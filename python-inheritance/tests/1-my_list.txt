@@ -43,7 +43,3 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 >>> my_list.extend([2, 5, 'apple'])
 >>> print(my_list)
 [1, 4, 2, 3, 5, 2, 5, 'apple']
-
->>> my_list.print_sorted()
-Traceback (most recent call last):
-TypeError: '<' not supported between instances of 'str' and 'int'

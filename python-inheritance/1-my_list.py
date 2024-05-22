@@ -16,7 +16,7 @@ class MyList(list):
         """
         Initializes a MyList object.
         """
-        self.my_list = []
+        pass
 
     def print_sorted(self):
         """
