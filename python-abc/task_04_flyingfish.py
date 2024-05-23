@@ -2,6 +2,13 @@
 
 
 class Fish:
+    """
+    A class representing a fish.
+    
+    Methods:
+    - swim: Makes the fish swim.
+    - habitat: Prints the fish's habitat.
+    """
     def swim(self):
         print("The fish is swimming")
     
@@ -27,7 +34,9 @@ class FlyingFish(Fish, Bird):
         print("The flying fish lives both in water and the sky!")
 
 # Instantiate an object of the FlyingFish class
+"""
 flying_fish = FlyingFish()
 flying_fish.fly()
 flying_fish.swim()
 flying_fish.habitat()
+"""
