@@ -121,7 +121,11 @@ def shape_info(shape):
     Returns:
         None
     """
-    if not isinstance(shape, Shape):
+    try:
+        area = shape.area()
+        perimeter = shape.perimeter()
+    except AttributeError:
         raise TypeError("shape is not a Shape")
-    print("Area: {}".format(shape.area()))
-    print("Perimeter: {}".format(shape.perimeter()))
+    else:
+        print("Area: {}".format(area))
+        print("Perimeter: {}".format(perimeter))
