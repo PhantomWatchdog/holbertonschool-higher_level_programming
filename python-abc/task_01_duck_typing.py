@@ -108,7 +108,7 @@ class Rectangle(Shape):
         """
         return 2 * (self.__width + self.__height)
 
-def shape_info(shape):
+def shape_info(Shape):
     """
     Prints the area and perimeter of a given shape.
 
@@ -122,8 +122,8 @@ def shape_info(shape):
         None
     """
     try:
-        area = shape.area()
-        perimeter = shape.perimeter()
+        area = Shape.area()
+        perimeter = Shape.perimeter()
     except AttributeError:
         raise TypeError("shape is not a Shape")
     else:
