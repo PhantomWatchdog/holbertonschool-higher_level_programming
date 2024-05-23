@@ -68,7 +68,7 @@ class Circle(Shape):
         Returns:
             float: The perimeter of the circle.
         """
-        return 2 * 3.141592653589793 * self.__radius 
+        return abs(2 * 3.141592653589793 * self.__radius)
 
 class Rectangle(Shape):
     """
