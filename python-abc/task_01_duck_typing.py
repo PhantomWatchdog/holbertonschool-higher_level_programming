@@ -59,7 +59,7 @@ class Circle(Shape):
         Returns:
             float: The area of the circle.
         """
-        return 3.14159265359 * self.__radius ** 2
+        return 3.14159265358 * self.__radius ** 2
 
     def perimeter(self):
         """
@@ -68,7 +68,7 @@ class Circle(Shape):
         Returns:
             float: The perimeter of the circle.
         """
-        return 2 * 3.14159265359 * self.__radius
+        return 2 * 3.14159265358 * self.__radius
 
 class Rectangle(Shape):
     """
@@ -123,5 +123,5 @@ def shape_info(shape):
     """
     if not isinstance(shape, Shape):
         raise TypeError("shape is not a Shape")
-    print("area: {}".format(shape.area()))
-    print("perimeter: {}".format(shape.perimeter()))
+    print("Area: {}".format(shape.area()))
+    print("Perimeter: {}".format(shape.perimeter()))
