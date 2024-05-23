@@ -2,6 +2,7 @@
 """ Shapes, Interfaces, and Duck Typing
 """
 from abc import ABC, abstractmethod
+from math import pi
 
 
 class Shape(ABC):
@@ -59,7 +60,7 @@ class Circle(Shape):
         Returns:
             float: The area of the circle.
         """
-        return 3.141592653589793 * self.__radius ** 2
+        return pi * self.__radius ** 2
 
     def perimeter(self):
         """
@@ -68,7 +69,7 @@ class Circle(Shape):
         Returns:
             float: The perimeter of the circle.
         """
-        return abs(2 * 3.141592653589793 * self.__radius)
+        return abs(2 * pi * self.__radius)
 
 class Rectangle(Shape):
     """
