@@ -2,7 +2,6 @@
 """
 save_to_json_file module
 """
-import json
 
 
 def save_to_json_file(my_obj, filename):
@@ -16,5 +15,6 @@ def save_to_json_file(my_obj, filename):
     Returns:
         None
     """
+    import json
     with open(filename, 'w') as f:
         json.dump(my_obj, f)
