@@ -1,9 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 This module contains a class that demonstrates
 serialization and deserialization using the pickle module.
 """
-
 import pickle
 
 
@@ -16,21 +15,19 @@ class CustomObject:
         age (int): The age of the object.
         is_student (bool): Indicates whether the object is a student or not.
     """
+    def __init__(self, name, age, is_student):
+        """
+        Initializes a new instance of the MyClass class.
 
-    class MyClass:
-        def __init__(self, name, age, is_student):
-            """
-            Initializes a new instance of the MyClass class.
-
-            Args:
-                name (str): The name of the object.
-                age (int): The age of the object.
-                is_student (bool): Indicates whether the object is
-                a student or not.
-            """
-            self.name = name
-            self.age = age
-            self.is_student = is_student
+        Args:
+            name (str): The name of the object.
+            age (int): The age of the object.
+            is_student (bool): Indicates whether the object is
+            a student or not.
+        """
+        self.name = name
+        self.age = age
+        self.is_student = is_student
 
     def display(self):
         """
