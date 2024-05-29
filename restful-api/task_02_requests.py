@@ -29,6 +29,7 @@ def fetch_and_print_posts():
         for post in posts:
             print(post.get('title'))
 
+
 def fetch_and_save_posts():
     """
     Fetches posts from the given URL and saves them in a CSV file.
