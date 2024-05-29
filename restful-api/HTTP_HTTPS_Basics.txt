@@ -1,0 +1,14 @@
+HTTP stands for Hypertext Transfer Protocol, while HTTPS stands for Hypertext Transfer Protocol Secure.
+
+HTTP transfers data in an readable format, while HTTPS transfers data in encrypted format.
+
+HTTPS uses an SSL (Secure Sockets Layer) or TLS (Transport Layer Security) certificate to create a secure encrypted connection between the client and the server.
+
+HTTP operates at the application layer of the OSI model, while HTTPS operates at the transport layer.
+
+HTTP uses port 80 for communication, while HTTPS uses port 443.
+
+About performance, HTTPS is slower than HTTP because it need additional steps for encryption and decryption of the data.
+
+About security, HTTPS is more secure than HTTP and is therefore recommended for websites that handle sensitive data, such as credit card information and user credentials.
+

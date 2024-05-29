@@ -1,0 +1,37 @@
+The most popular HTTP methods (CRUD) create, read, update and delete:
+
+POST: Sends data to a server to create a resource.
+GET: Requests data from a specified resource. This is one of the most common methods.
+PUT: Sends data to a server to update a resource.
+DELETE: Deletes the specified resource.
+
+Other methods useful:
+
+HEAD: Similar to GET, but it does not return the response body.
+OPTIONS: Returns the HTTP methods that the server supports for the specified URL.
+PATCH: Applies partial modifications to a resource.
+
+
+HTTP Status Codes:
+
+200 OK: The request has succeeded.
+201 Created: The request has succeeded and a new resource was created as a result.
+204 No Content: The server has successfully fulfilled the request and there is no additional content to send in the response payload body.
+
+300 Multiple Choices: The request has more than one possible response. The client should choose one of them.
+301 Moved Permanently: The URL of the requested resource has been changed permanently. The new URL is given in the response.
+302 Found: This response code means that the URI of the requested resource has been changed temporarily.
+304 Not Modified: It is used for caching purposes. It tells the client that the response has not been modified,
+    so the client can continue to use the same cached version of the response.
+
+400 Bad Request: The server could not understand the request due to invalid syntax.
+401 Unauthorized: The request requires user authentication.
+403 Forbidden: The server understood the request, but it refuses to authorize it.
+404 Not Found: The server can't find the requested resource.
+
+500 Internal Server Error: The server encountered an unexpected condition that prevented it from fulfilling the request.
+501 Not Implemented: The request method is not supported by the server and cannot be handled.
+502 Bad Gateway: This error response means that the server,
+    while working as a gateway to get a response needed to handle the request, got an invalid response.
+503 Service Unavailable: The server is not ready to handle the request.
+    Common causes are a server that is down for maintenance or that is overloaded.
