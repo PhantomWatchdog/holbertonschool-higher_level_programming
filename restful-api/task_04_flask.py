@@ -38,4 +38,4 @@ def add_user():
         return "Missing username in request", 400
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run()
