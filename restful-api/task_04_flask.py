@@ -7,20 +7,48 @@ users = {}
 
 @app.route("/")
 def home():
+    """
+    This function handles the root route of the Flask API.
+
+    Returns:
+        str: A welcome message for the Flask API.
+    """
     return "Welcome to the Flask API!"
 
 @app.route("/data")
 def get_data():
+    """
+    Retrieves and returns the data from the 'users' dictionary as a JSON response.
+
+    Returns:
+        A JSON response containing the list of keys from the 'users' dictionary.
+    """
     return jsonify(list(users.keys()))
 
 
 @app.route("/status")
 def status():
+    """
+    Returns the status of the API.
+
+    Returns:
+        str: The status message "OK".
+    """
     return "OK"
 
 
 @app.route("/users/<username>")
 def get_user(username):
+    """
+    Retrieve user information based on the provided username.
+
+    Args:
+        username (str): The username of the user to retrieve.
+
+    Returns:
+        If the user is found, returns a JSON response containing the user information.
+        If the user is not found, returns a JSON response with an error message and a 404 status code.
+    """
     user = users.get(username)
     if user:
         return jsonify(user)
@@ -29,6 +57,13 @@ def get_user(username):
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
+    """
+    Add a new user to the system.
+
+    Returns:
+        A JSON response containing a success message and the user data if the user is added successfully.
+        A JSON response containing an error message if the username is missing.
+    """
     user_data = request.get_json()
     username = user_data.get("username")
     if not username:
