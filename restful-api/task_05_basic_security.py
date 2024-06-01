@@ -42,15 +42,12 @@ def login():
     data = request.get_json()
     username = data.get('username')
     password = data.get('password')
-    if not username:
-        return jsonify({"error": "Missing username"}), 400
-    if not password:
-        return jsonify({"error": "Missing password"}), 400
-    if verify_password(username, password):
-        access_token = create_access_token(identity=username)
+    user = users.get(username)
+    if user and check_password_hash(user['password'], password):
+        access_token = create_access_token(identity={'username': username,
+                                                    'role': user['role']})
         return jsonify(access_token=access_token), 200
-    else:
-        return jsonify({"error": "Invalid username or password"}), 401
+    return jsonify({"error": "Invalid username or password"}), 401
 
 
 @app.route('/jwt-protected')
