@@ -34,7 +34,7 @@ def verify_password(username, password):
 @app.route('/basic-protected')
 @auth.login_required
 def basic_protected():
-    return jsonify({"message": "This is a protected endpoint"})
+    return jsonify({"Basic Auth: Access Granted"})
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -54,7 +54,7 @@ def login():
 @app.route('/jwt-protected')
 @jwt_required()
 def jwt_protected():
-    return "This is a protected endpoint"
+    return "JWT Auth: Access Granted"
 
 
 @app.route('/admin-only')
@@ -63,7 +63,7 @@ def admin_only():
     current_user = get_jwt_identity()
     if current_user != 'admin':
         return jsonify({"error": "Unauthorized access"}), 403
-    return jsonify({"message": "This is an admin-only endpoint"})
+    return jsonify("Admin Access: Granted")
 
 
 # Error handlers
@@ -73,22 +73,22 @@ def handle_unauthorized_error(error):
 
 
 @jwt.invalid_token_loader
-def handle_invalid_token_error():
+def handle_invalid_token_error(error):
     return jsonify({"error": "Invalid token"}), 401
 
 
 @jwt.expired_token_loader
-def handle_expired_token_error():
+def handle_expired_token_error(error):
     return jsonify({"error": "Token has expired"}), 401
 
 
 @jwt.revoked_token_loader
-def handle_revoked_token_error():
+def handle_revoked_token_error(error):
     return jsonify({"error": "Token has been revoked"}), 401
 
 
 @jwt.needs_fresh_token_loader
-def handle_needs_fresh_token_error():
+def handle_needs_fresh_token_error(error):
     return jsonify({"error": "Fresh token required"}), 401
 
 
