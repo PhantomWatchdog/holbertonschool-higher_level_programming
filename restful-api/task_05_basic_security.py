@@ -31,6 +31,10 @@ def verify_password(username, password):
         return username
     return None
 
+@app.route('/basic-protected')
+@auth.login_required
+def basic_protected():
+    return jsonify({"message": "This is a protected endpoint"})
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -45,12 +49,6 @@ def login():
         return jsonify(access_token=access_token), 200
     else:
         return jsonify({"error": "Invalid username or password"}), 401
-
-
-@app.route('/basic-protected')
-@auth.login_required
-def basic_protected():
-    return jsonify({"message": "This is a protected endpoint"})
 
 
 @app.route('/jwt-protected')
