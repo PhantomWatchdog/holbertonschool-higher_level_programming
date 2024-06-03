@@ -1,3 +1,5 @@
-FROM alpine:latest
-VOLUME [ "/data" ]
-CMD [ "echo", "Hello, World!"]
+FROM alpine
+
+VOLUME /data
+
+CMD ["tail", "-f", "/dev/null"]
