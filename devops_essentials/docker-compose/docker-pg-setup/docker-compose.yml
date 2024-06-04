@@ -1,0 +1,33 @@
+version: "3"
+
+networks:
+  private_network:
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: SuperUser
+      POSTGRES_PASSWORD: SuperPassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - private_network
+    ports:
+      - "5432:5432"
+
+  admin:
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: Admin@exemple.com
+      PGADMIN_DEFAULT_PASSWORD: AdminPassword
+    ports:
+      - "5000:80"
+    depends_on:
+      - db
+    networks:
+      - private_network
+
+volumes:
+  postgres_data:
