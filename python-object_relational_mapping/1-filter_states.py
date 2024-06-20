@@ -3,7 +3,8 @@
 import MySQLdb
 import sys
 
-def main():
+
+if __name__ == "__main__":
     """
     Lists all states with a name starting with N (upper N)
     from the database hbtn_0e_0_usa
@@ -16,6 +17,3 @@ def main():
         print(row)
     cursor.close()
     db.close()
-
-if __name__ == "__main__":
-    main()
