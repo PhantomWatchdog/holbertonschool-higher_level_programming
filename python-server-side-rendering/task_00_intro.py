@@ -1,3 +1,5 @@
+import os
+
 def generate_invitations(template, attendees):
     if not isinstance(template, str):
         print("Error: template should be a string")
@@ -19,5 +21,12 @@ def generate_invitations(template, attendees):
         output = template
         for key, value in attendee.items():
             output = output.replace("{" + key + "}", str(value) if value else "N/A")
-        with open(f"output_{i}.txt", "w") as file:
-            file.write(output)
+        filename = f"output_{i}.txt"
+        if os.path.exists(filename):
+            print(f"Error: File {filename} already exists, skipping.")
+            continue
+        try:
+            with open(filename, "w") as file:
+                file.write(output)
+        except Exception as e:
+            print(f"Error: Failed to write to file {filename}: {str(e)}")
