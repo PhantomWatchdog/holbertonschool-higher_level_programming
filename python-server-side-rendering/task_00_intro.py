@@ -4,6 +4,13 @@ import os
 
 
 def generate_invitations(template, attendees):
+    """
+    Generate invitation files based on a template for each attendee.
+
+    Args:
+        template (str): The template string to be used for generating the invitations.
+        attendees (list): A list of dictionaries representing the attendees' information.
+    """
     if not isinstance(template, str):
         print("Error: template should be a string")
         return
