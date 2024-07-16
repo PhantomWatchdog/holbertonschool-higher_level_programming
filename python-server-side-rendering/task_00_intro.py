@@ -8,8 +8,10 @@ def generate_invitations(template, attendees):
     Generate invitation files based on a template for each attendee.
 
     Args:
-        template (str): The template string to be used for generating the invitations.
-        attendees (list): A list of dictionaries representing the attendees' information.
+        template (str): The template string
+        to be used for generating the invitations.
+        attendees (list): A list of dictionaries
+        representing the attendees' information.
     """
     if not isinstance(template, str):
         print("Error: template should be a string")
@@ -30,7 +32,8 @@ def generate_invitations(template, attendees):
     for i, attendee in enumerate(attendees, start=1):
         output = template
         for key, value in attendee.items():
-            output = output.replace("{" + key + "}", str(value) if value else "N/A")
+            output = output.replace("{" + key + "}",
+                                    str(value) if value else "N/A")
         filename = f"output_{i}.txt"
         if os.path.exists(filename):
             print(f"Error: File {filename} already exists, skipping.")
