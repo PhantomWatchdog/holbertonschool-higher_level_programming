@@ -2,7 +2,7 @@
 from task_00_intro import generate_invitations
 
 # Read the template from a file
-with open('templates/template.txt', 'r') as file:
+with open('template.txt', 'r') as file:
     template_content = file.read()
 
 # List of attendees
