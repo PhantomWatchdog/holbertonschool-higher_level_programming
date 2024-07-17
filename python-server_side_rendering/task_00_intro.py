@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import os
 
 
@@ -31,13 +29,18 @@ def generate_invitations(template, attendees):
 
     for i, attendee in enumerate(attendees, start=1):
         output = template
+
         for key, value in attendee.items():
-            output = output.replace("{" + key + "}",
-                                    str(value) if value else "N/A")
+            if value is None:
+                value = "N/A"
+            output = output.replace("{" + key + "}", str(value))
+
         filename = f"output_{i}.txt"
+
         if os.path.exists(filename):
             print(f"Error: File {filename} already exists, skipping.")
             continue
+
         try:
             with open(filename, "w") as file:
                 file.write(output)
