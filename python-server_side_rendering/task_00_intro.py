@@ -30,10 +30,9 @@ def generate_invitations(template, attendees):
     for i, attendee in enumerate(attendees, start=1):
         output = template
 
-        for key, value in attendee.items():
-            if value is None:
-                value = "N/A"
-            output = output.replace("{" + key + "}", str(value))
+        for placeholder in ["name", "event_title", "event_date", "event_location"]:
+                value = attendee.get(placeholder, "N/A")
+                output = output.replace(f"{{{placeholder}}}", value if value else "N/A")
 
         filename = f"output_{i}.txt"
 
