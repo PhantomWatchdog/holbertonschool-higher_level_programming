@@ -4,9 +4,11 @@
 Define a locked class with restricted attribute assignment.
 """
 
+
 class LockedClass:
     """
-    This class represents a locked class with restricted attribute assignment.
+    This class represents a locked class
+    with restricted attribute assignment.
 
     Attributes:
         first_name (str): The first name of the locked class instance.
