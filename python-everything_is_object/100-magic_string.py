@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/python3
 def magic_string():
-    if not hasattr(magic_string, 'i'):
-        magic_string.i = 0
-    magic_string.i += 1
-    return ", ".join(["BestSchool"] * magic_string.i)
+    magic_string.n = getattr(magic_string, 'n', 0) + 1
+    return ("BestSchool, " * (magic_string.n - 1) + "BestSchool")
