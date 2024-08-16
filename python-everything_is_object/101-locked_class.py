@@ -1,7 +1,15 @@
 #!/usr/bin/python3
 
-class LockedClass:
-    __slots__ = ['first_name']
+"""
+Define a locked class with restricted attribute assignment.
+"""
 
-    def __init__(self):
-        pass
+class LockedClass:
+    """
+    This class represents a locked class with restricted attribute assignment.
+
+    Attributes:
+        first_name (str): The first name of the locked class instance.
+    """
+
+    __slots__ = ['first_name']
